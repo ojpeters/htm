@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-        <title>Beauty Spot App A Mobile App Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+        <title>Make the Tax Man Happy App| Home :: Record Income/Expenses for Tax</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="keywords" content="Beauty Spot App Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android  Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
@@ -26,12 +26,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<script src="js/bootstrap.min.js"></script>
 			<script src="js/Chart.js"></script>
 			 <!--script-->
+			 
             <script src="js/bigSlide.js"></script>
             <script>
 				$(document).ready(function() {
 				$('.menu-link').bigSlide();
 				});
             </script>
+			 <!--code-->
+			 <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+			 <script src="js/postdata.js"></script>
+			 
+			  <!--end code-->
             <!--script-->
 			
 		<!---start-date-piker---->
@@ -250,16 +256,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="clearfix"></div>
 				</div>
 				<div class="appoint reg">
-					<form>
+					<form id="expenseform">
 						<ul>
 							 <li class="text-info">Select Date: </li>
-							 <li><input class="date" id="datepicker" type="text" value="19/10/2015" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '19/10/2015';}" required=""></li>
+							 <li><input class="date" id="datepicker" type="text" value="" required="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '19/10/2015';}" required=""></li>
 						</ul>
 						<ul>
 							<li class="text-info">Select Type: </li>
 							<li>
 								<div class="section_room">
-								  <select id="country" onchange="change_country(this.value)" class="frm-field required sect">
+								  <select id="category" onchange="change_country(this.value)" class="frm-field required sect">
 										<option value="transportation">Transportation</option>
 										<option value="entertainment">Entertainment</option> 
 										<option value="accounting">Accounting</option>					
@@ -271,11 +277,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</ul>
 						<ul>
 							<li class="text-info">Title: </li>
-							<li><input type="text" value="" required=""></li>	
+							<li><input type="text" value="" required="" id="title"></li>	
 						</ul>
 						<ul>
 							 <li class="text-info">Cost: </li>
-							 <li><input type="text" value="" required=""></li>
+							 <li><input type="text" value="" required="" id="cost"></li>
 						</ul>
 						<ul>
 							 <li class="text-info">Tax:</li>
@@ -283,9 +289,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</ul>
 						<ul>
 							 <li class="text-info">Description:</li>
-							 <li><textarea value="" required=""></textarea></li>
+							 <li><textarea value="" required="" id="desc"></textarea></li>
 						</ul>						
-						<input type="submit" value="Add NOW"> 
+						
+						<ul>
+							 <li class="text-info"><input type="submit"   id="takePicBtn" onclick="return capturePhoto();" Value="Add Picture" /></li>
+							 <li><input type="submit" value="Add NOW" onclick="postData()"> </li>
+						</ul>
+						<ul>
+						images Captured:<img style="display:block;" id="imgProfile" src="" />
+						</ul>
 					 </form>
 				</div>
 			</div>
@@ -405,6 +418,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </div>
 <script src="js/jquery.nicescroll.js"></script>
 <script src="js/scripts.js"></script>
-
+<div data-role="page" id="page2"> 
+<div data-role="header">
+	<h1>Results</h1>
+</div><!-- /header -->
+ 
+<div data-role="content"> 
+	<div id="resultshow"> </div>     
+</div><!-- /content -->
+ 
+<div data-role="footer">
+	<h4>Page Footer</h4>
+</div><!-- /footer -->
+</div><!-- /page -->
+					
 </body>
 </html>
