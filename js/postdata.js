@@ -146,8 +146,8 @@ function postData() {
 					error: function (request,error) {
 						
 										//display result in another page
-						$.mobile.changePage("#page2");
-						$('#resultshow').html("message: "+request.responseText+formData+"  ErrorFound: " + error);
+						//$.mobile.changePage("#page2");
+						$('#result').html("message: "+request.responseText+formData+"  ErrorFound: " + error);
 						
 						//alert(formData);
 					}        
