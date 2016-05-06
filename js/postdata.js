@@ -106,23 +106,24 @@ function postData() {
 							// This callback function will trigger before data is sent
 							
 							//$.mobile.showPageLoadingMsg(true); // This will show ajax spinner
-							$.mobile.loading('show', {
+							/*$.mobile.loading('show', {
 								theme: "a",
 								text: "wait while we process..",
 								textonly: true,
 								textVisible: true
 							});
+							*/
 					},
 					complete: function() {
 							// This callback function will trigger on data sent/received complete
 							//$.mobile.hidePageLoadingMsg(); // This will hide ajax spinner
 							//alert("completeing"+formData);
-							$.mobile.loading("Cone and in Done");
+							//$.mobile.loading("Cone and in Done");
 					},
 					success: function (result) {
-						 
+						 alert("result"+$result);
 						//display result in another page
-						$.mobile.changePage("#page2");
+						/*$.mobile.changePage("#page2");
 						$('#resultshow').html(result);
 						//check if image is captured an dupload
 							if (sessionStorage.getItem('imagepath') == null){
@@ -138,7 +139,8 @@ function postData() {
 								uploadPhoto(imageitem,newsid);
 								//movePic(imageitem);
 								
-							}					
+							}
+*/							
 						
 					},
 					error: function (request,error) {
