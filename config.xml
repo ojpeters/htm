@@ -39,15 +39,17 @@
     <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
     
        <!-- Define a specific version of PhoneGap to build into your app.-->
-        <preference name="phonegap-version"       value="3.7.0" />
+        
+		<preference name="phonegap-version" value="cli-5.2.0" />
     
 
     <!-- Plugins -->
 <plugin name="Notification" value="org.apache.cordova.Notification"/>
 
     <!-- Core plugins -->
+	<gap:plugin name="cordova-plugin-camera" source="npm" />
     <gap:plugin name="org.apache.cordova.battery-status" />
-    <gap:plugin name="org.apache.cordova.camera" />
+   
     <gap:plugin name="org.apache.cordova.media-capture" />
     <gap:plugin name="org.apache.cordova.console" />
     <gap:plugin name="org.apache.cordova.contacts" />
