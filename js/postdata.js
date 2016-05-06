@@ -105,12 +105,19 @@ function postData() {
 					beforeSend: function() {
 							// This callback function will trigger before data is sent
 							
-							$.mobile.showPageLoadingMsg(true); // This will show ajax spinner
+							//$.mobile.showPageLoadingMsg(true); // This will show ajax spinner
+							$.mobile.loading('show', {
+								theme: "a",
+								text: "wait while we process..",
+								textonly: true,
+								textVisible: true
+							});
 					},
 					complete: function() {
 							// This callback function will trigger on data sent/received complete
-							$.mobile.hidePageLoadingMsg(); // This will hide ajax spinner
+							//$.mobile.hidePageLoadingMsg(); // This will hide ajax spinner
 							//alert("completeing"+formData);
+							$.mobile.loading("Cone and in Done");
 					},
 					success: function (result) {
 						 

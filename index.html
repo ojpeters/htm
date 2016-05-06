@@ -265,7 +265,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<li class="text-info">Select Type: </li>
 							<li>
 								<div class="section_room">
-								  <select id="category" onchange="change_country(this.value)" class="frm-field required sect">
+								  <select id="category"  name="category" onchange="change_country(this.value)" class="frm-field required sect">
 										<option value="transportation">Transportation</option>
 										<option value="entertainment">Entertainment</option> 
 										<option value="accounting">Accounting</option>					
@@ -277,19 +277,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</ul>
 						<ul>
 							<li class="text-info">Title: </li>
-							<li><input type="text" value="" required="" id="title"></li>	
+							<li><input type="text" name="title" value="" required="" id="title"></li>	
 						</ul>
 						<ul>
 							 <li class="text-info">Cost: </li>
-							 <li><input type="text" value="" required="" id="cost"></li>
+							 <li><input type="text" name="cost" value="" required="" id="cost"></li>
 						</ul>
 						<ul>
 							 <li class="text-info">Tax:</li>
-							 <li><input type="text" value=""></li>
+							 <li><input name="tax" type="text" value=""></li>
 						</ul>
 						<ul>
 							 <li class="text-info">Description:</li>
-							 <li><textarea value="" required="" id="desc"></textarea></li>
+							 <li><textarea name="description" value="" required="" id="desc"></textarea></li>
 						</ul>						
 						
 						<ul>
