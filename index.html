@@ -256,8 +256,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="clearfix"></div>
 				</div>
 				<div class="appoint reg">
-				<div class="section_room" id="result">
+				<div class="section_room" id="result" style='color:red;'>
+								
 				</div>
+				
 					<form id="expenseform">
 						<ul>
 							 <li class="text-info">Select Date: </li>
@@ -296,10 +298,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						
 						<ul>
 							 <li class="text-info"><input type="submit"   id="takePicBtn" onclick="return capturePhoto();" Value="Add Picture" /></li>
-							 <li><input type="submit" value="Add NOW" onclick="postData()"> </li>
+							 <li><input type="button" value="Add NOW" onclick="postData()"> </li>
+							 <div id='loadingmessage' style='display:none'>
+							<img src='images/ajax-loader.gif'/>....Processing,Please wait!This might take few minutes
+							</div>
 						</ul>
 						<ul>
-						images Captured:<img style="display:block;" id="imgProfile" src="" />
+						images Captured:<img style="display:block;" id="imgProfile"  />
 						</ul>
 					 </form>
 				</div>

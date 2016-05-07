@@ -88,13 +88,14 @@ function resOnError(error) {
 function postData() {
 
 	
-	var target="http://store.ojpeters.com/savedata/addexpense";
-	//var target="http://localhost/remotemobile/index.php/savecomment"	
+	var target="http://store.ojpeters.com/record/addexpense";	
 	//addTolocalDB();
 
-		if(isErrorfree){
 		
-		alert("all clear,calling post");
+		
+		
+		$("#result").html("");
+		$('#loadingmessage').show();
 		var formData = $("#expenseform").serialize();
 				alert("Posting"+formData);
 			$.ajax({
@@ -102,6 +103,7 @@ function postData() {
 					url: target,
 					cache: false,
 					data: formData,
+					dataType: 'text',
 					beforeSend: function() {
 							// This callback function will trigger before data is sent
 							
@@ -113,6 +115,7 @@ function postData() {
 								textVisible: true
 							});
 							*/
+							alert("Posting sending");
 					},
 					complete: function() {
 							// This callback function will trigger on data sent/received complete
@@ -121,9 +124,10 @@ function postData() {
 							//$.mobile.loading("Cone and in Done");
 					},
 					success: function (result) {
-						 alert("result"+$result);
+						$('#loadingmessage').hide();
+						 
 						//display result in another page
-						/*$.mobile.changePage("#page2");
+						$.mobile.changePage("#page2");
 						$('#resultshow').html(result);
 						//check if image is captured an dupload
 							if (sessionStorage.getItem('imagepath') == null){
@@ -131,29 +135,36 @@ function postData() {
 								$("#resultshow").append("Image NOT set:"+imageURI);
 							}else{
 								// myValue was set			
-								
+								/*
 								imageitem=sessionStorage.getItem('imagepath');
 								$("#resultshow").append("Image captured:"+imageitem);
 								var returnedresult=result.split(":");// we separated it
 								newsid=returnedresult[1];
 								uploadPhoto(imageitem,newsid);
 								//movePic(imageitem);
+								*/
 								
 							}
-*/							
+							
 						
 					},
-					error: function (request,error) {
-						
+					error:  function(xhr,textStatus,err) {
+						//$('#result').html("issue: "+request.responseText+"status"+st.status+"  ErrorFound: " + error);
+						$('#loadingmessage').hide();						
 										//display result in another page
 						//$.mobile.changePage("#page2");
-						$('#result').html("message: "+request.responseText+formData+"  ErrorFound: " + error);
+						//$('#result').html("message: "+request.responseText+formData+"  ErrorFound: " + error);
 						
-						//alert(formData);
+						    console.log("readyState: " + xhr.readyState);
+							console.log("responseText: "+ xhr.responseText);
+							console.log("status: " + xhr.status);
+							console.log("text status: " + textStatus);
+							console.log("error: " + err);
+							
 					}        
 
 			});
-		}else{alert("enter the required information");}
+		//}else{alert("enter the required information");}
 		
 	/////
 
@@ -218,7 +229,7 @@ function alertDismissed(){
 function cleanUp() {
 		imagedata = "";
 		$("#submit").removeAttr("disabled").button("refresh");
-		$("#comment").val("");
+		$("#description").val("");
 		$("#takePicBtn").text("Add Pic").button("refresh");
 	}
 	
