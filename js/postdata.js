@@ -86,16 +86,13 @@ function resOnError(error) {
 
 ///post form data
 function postData() {
-
 	
 	var target="http://store.ojpeters.com/record/addexpense";	
-	//addTolocalDB();
-
-		
-		
+	//addTolocalDB();		
 		
 		$("#result").html("");
 		$('#loadingmessage').show();
+		
 		var formData = $("#expenseform").serialize();
 				alert("Posting"+formData);
 			$.ajax({
@@ -127,12 +124,13 @@ function postData() {
 						$('#loadingmessage').hide();
 						 
 						//display result in another page
-						$.mobile.changePage("#page2");
-						$('#resultshow').html(result);
+						//$.mobile.changePage("#page2");
+						//$( ":mobile-pagecontainer" ).pagecontainer( "change", "index2.html", { role: "dialog" } );
+						$('#result').html(result);
 						//check if image is captured an dupload
 							if (sessionStorage.getItem('imagepath') == null){
 								// myValue was not set
-								$("#resultshow").append("Image NOT set:"+imageURI);
+								$("#result").append("Image NOT set:"+imageURI);
 							}else{
 								// myValue was set			
 								/*
