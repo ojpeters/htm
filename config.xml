@@ -29,8 +29,8 @@
 			<param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
 		</feature>
  <!-- Plugins -->
-<plugin name="Notification" value="org.apache.cordova.Notification"/>
 
+<gap:plugin name="org.apache.cordova.dialogs" />
     <!-- Core plugins -->
     <gap:plugin name="org.apache.cordova.battery-status" />
     <gap:plugin name="org.apache.cordova.camera" />
