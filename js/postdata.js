@@ -94,7 +94,7 @@ function postData() {
 		$('#loadingmessage').show();
 		
 		var formData = $("#expenseform").serialize();
-				alert("Posting"+formData);
+				showAlert("Posting"+formData);
 			$.ajax({
 					type: "POST",
 					url: target,
@@ -112,7 +112,7 @@ function postData() {
 								textVisible: true
 							});
 							*/
-							alert("Posting sending");
+							//alert("Posting sending");
 					},
 					complete: function() {
 							// This callback function will trigger on data sent/received complete
@@ -133,14 +133,15 @@ function postData() {
 								$("#result").append("Image NOT set:"+imageURI);
 							}else{
 								// myValue was set			
-								/*
+								
 								imageitem=sessionStorage.getItem('imagepath');
 								$("#resultshow").append("Image captured:"+imageitem);
-								var returnedresult=result.split(":");// we separated it
+								/*var returnedresult=result.split(":");// we separated it
 								newsid=returnedresult[1];
 								uploadPhoto(imageitem,newsid);
-								//movePic(imageitem);
 								*/
+								//movePic(imageitem);
+								
 								
 							}
 							
