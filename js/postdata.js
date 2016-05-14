@@ -95,7 +95,7 @@ function postData() {
 		$('#loadingmessage').show();
 		
 		var formData = $("#expenseform").serialize();
-				showAlert("Posting"+formData);
+				//showAlert("Posting"+formData);
 			$.ajax({
 					type: "POST",
 					url: target,
@@ -123,7 +123,7 @@ function postData() {
 					},
 					success: function (result) {
 						$('#loadingmessage').hide();
-						 
+						 showAlert("responseError:"+result);
 						//display result in another page
 						$.mobile.changePage("#page2");
 						//$( ":mobile-pagecontainer" ).pagecontainer( "change", "index2.html", { role: "dialog" } );
@@ -167,6 +167,7 @@ function postData() {
 							console.log("status: " + xhr.status);
 							console.log("text status: " + textStatus);
 							console.log("error: " + err);
+							showAlert("Error"+xhr.responseText);
 							
 					}        
 
