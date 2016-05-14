@@ -125,15 +125,16 @@ function postData() {
 						$('#loadingmessage').hide();
 						 
 						//display result in another page
-						//$.mobile.changePage("#page2");
+						$.mobile.changePage("#page2");
 						//$( ":mobile-pagecontainer" ).pagecontainer( "change", "index2.html", { role: "dialog" } );
-						$('#result').html(result);
-						 var nextpage = '#page2' ;//+ $.mobile.activePage.next('div[data-role="page"]')[0].id;
+						$('#resultshow2').html(result);
+						 /*var nextpage = '#page2' ;//+ $.mobile.activePage.next('div[data-role="page"]')[0].id;
 						  $.mobile.changePage(nextpage, {
 						   transition: 'slide',
 						   reverse: false
 						  });
-	  
+						*/
+						/*
 						//check if image is captured an dupload
 							if (sessionStorage.getItem('imagepath') == null){
 								// myValue was not set
@@ -146,12 +147,12 @@ function postData() {
 								/*var returnedresult=result.split(":");// we separated it
 								newsid=returnedresult[1];
 								uploadPhoto(imageitem,newsid);
-								*/
+								/
 								//movePic(imageitem);
 								
 								
 							}
-							
+						*/	
 						
 					},
 					error:  function(xhr,textStatus,err) {
