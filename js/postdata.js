@@ -8,6 +8,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
     pictureSource = navigator.camera.PictureSourceType;
     destinationType = navigator.camera.DestinationType;
+	$.mobile.initializePage();
 }
 
 
@@ -127,6 +128,12 @@ function postData() {
 						//$.mobile.changePage("#page2");
 						//$( ":mobile-pagecontainer" ).pagecontainer( "change", "index2.html", { role: "dialog" } );
 						$('#result').html(result);
+						 var nextpage = '#page2' ;//+ $.mobile.activePage.next('div[data-role="page"]')[0].id;
+						  $.mobile.changePage(nextpage, {
+						   transition: 'slide',
+						   reverse: false
+						  });
+	  
 						//check if image is captured an dupload
 							if (sessionStorage.getItem('imagepath') == null){
 								// myValue was not set
