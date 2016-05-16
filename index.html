@@ -1,68 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Make the Tax Man Happy App| Home :: Record Income/Expenses for Tax</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="keywords" content="Income/Expenses" />
-		<script type="application/x-javascript"> addEventListener("load", function() {setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-		<meta charset utf="8">
-        <!--font-awsome-css-->
-           <link rel="stylesheet" href="css/font-awesome.min.css"> 
-		<!--bootstrap-->
-			<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-		<!--custom css-->
-			<link rel="stylesheet" href="css/jquery-ui.css" />
-			<link href="css/style.css" rel="stylesheet" type="text/css"/>
-			
-        <!--component-css-->
-			<script src="js/jquery-2.1.4.min.js"></script>
-			<script src="js/jquery-mobile-1.3.2.js"></script>
-			<script src="js/bootstrap.min.js"></script>
-			
-			<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-			 <!--script-->
-			 
-            <script src="js/bigSlide.js"></script>
-            <script>
-				$(document).ready(function() {
-				$('.menu-link').bigSlide();
-				});
-            </script>
-			 <!--code-->
-			 
-			 <script src="js/postdata.js"></script>
-			 
-			  <!--end code-->
-            <!--script-->
-			
-		<!---start-date-piker---->
-			
-				<script src="js/jquery-ui.js"></script>
-				    <script>
-											  $(function() {
-												$( "#datepicker,#datepicker1" ).datepicker();
-											  });
-					</script>
-		<!---/End-date-piker---->
-	<!-- start-smoth-scrolling -->
-		<script type="text/javascript" src="js/move-top.js"></script>
-		<script type="text/javascript" src="js/easing.js"></script>
-		<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){		
-					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-				});
-			});
-		</script>
-	<!-- start-smoth-scrolling -->
-		
-		<!--script-->
-		<link href='//fonts.googleapis.com/css?family=Rajdhani:400,300,500,600,700' rel='stylesheet' type='text/css'>
-		<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-    
-    <script src="js/login.js"></script>
+    <title>jQM Complex Demo</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"/>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script> 
+    <script src="js/index.js"></script>
 </head>
 <body>
     <div data-role="page" id="login" data-theme="b">
@@ -72,20 +16,17 @@
  
         <div data-role="content">
             <form id="check-user" class="ui-body ui-body-a ui-corner-all" data-ajax="false">
-			<div class="appoint reg">
-				<ul>
-					<li class="text-info">Enter Your User name: </li>
-					<li><input type="text" name="username" value="" required="" id="username"></li>	
-				</ul>
-				<ul>
-					<li class="text-info">Enter Password: </li>
-					<li><input type="password" name="password" value="" required="" id="password"></li>
-				</ul>
-				 <ul>
-					<li><input type="button" data-theme="b" name="submit" id="submit" value="Submit"></li>
-				 </ul>
-			</div>
-
+                <fieldset>
+                    <div data-role="fieldcontain">
+                        <label for="username">Enter your username:</label>
+                        <input type="text" value="" name="username" id="username"/>
+                    </div>                                  
+                    <div data-role="fieldcontain">                                      
+                        <label for="password">Enter your password:</label>
+                        <input type="password" value="" name="password" id="password"/> 
+                    </div>
+                    <input type="button" data-theme="b" name="submit" id="submit" value="Submit">
+                </fieldset>
             </form>                              
         </div>
  
@@ -99,109 +40,7 @@
         </div>
  
         <div data-role="content">
-            <div id="appoint" class="book">
-				<div class="menu-notify2">
-					<div class="profile-left">
-						<a href="#menu" class="menu-link"><i class="fa fa-chevron-left"></i></a>
-					</div>
-					<div class="Profile-mid logo2">
-						<h3>Submit Expense</h3>
-					</div>
-					<div class="Profile-right">
-						<div id="dd4" class="wrapper-dropdown-4" tabindex="1"><i class="fa fa-home"></i>
-							<ul class="dropdown">
-								<li><a class="scroll" href="#home">Home </a></li>
-								<li><a class="scroll" href="#services">Expenses</a></li>
-								<li><a class="scroll" href="#appoint">Add Expense</a></li>
-								<li><a class="scroll" href="#contact">Login</a></li>
-							</ul>
-								<script type="text/javascript">
-															function DropDown(el) {
-																this.dd = el;
-																this.initEvents();
-															}
-															DropDown.prototype = {
-																initEvents : function() {
-																	var obj = this;
-												
-																	obj.dd.on('click', function(event){
-																		$(this).toggleClass('active');
-																		event.stopPropagation();
-																	});	
-																}
-															}
-															$(function() {
-												
-																var dd = new DropDown( $('#dd4') );
-												
-																$(document).click(function() {
-																	// all dropdowns
-																	$('.wrapper-dropdown-4').removeClass('active');
-																});
-												
-															});
-								</script>
-						</div>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-				<div class="appoint reg">
-				<div class="section_room" id="result" style='color:red;'>
-								
-				</div>
-				
-					<form id="expenseform">
-						<ul>
-							 <li class="text-info">Select Date: </li>
-							 <li><input class="date" id="datepicker" type="text" value="" required="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '19/10/2015';}" required=""></li>
-						</ul>
-						<ul>
-							<li class="text-info">Select Type: </li>
-							<li>
-								<div class="section_room">
-								  <select id="category"  name="category" onchange="change_country(this.value)" class="frm-field required sect">
-										<option value="transportation">Transportation</option>
-										<option value="entertainment">Entertainment</option> 
-										<option value="accounting">Accounting</option>					
-										<option value="null">Pedicure</option>
-										<option value="null">Manicure</option>											
-								  </select>
-								</div>
-							</li>
-						</ul>
-						<ul>
-							<li class="text-info">Title: </li>
-							<li><input type="text" name="title" value="" required="" id="title"></li>	
-						</ul>
-						<ul>
-							 <li class="text-info">Cost: </li>
-							 <li><input type="text" name="cost" value="" required="" id="cost"></li>
-						</ul>
-						<ul>
-							 <li class="text-info">Tax:</li>
-							 <li><input name="tax" type="text" value=""></li>
-						</ul>
-						<ul>
-							 <li class="text-info">Description:</li>
-							 <li><textarea name="description" value="" required="" id="desc"></textarea></li>
-						</ul>						
-						
-						<ul>
-							 <li class="text-info"><input type="button"   id="takePicBtn" onclick="return capturePhoto();" Value="Add Picture" /></li>
-							 <li><input type="button" value="Add NOW" onclick="postData()"> </li>
-							 <div id='loadingmessage' style='display:none'>
-							<img src='images/ajax-loader.gif'/>....Processing,Please wait!This might take few minutes
-							</div>
-						</ul>
-						<ul>
-						images Captured:<img style="display:block;" id="imgProfile"  />
-						</ul>
-					 </form>
-					 <div data-role="content"> 
-						<div id="resultshow"> </div>     
-					</div><!-- /content -->
-				</div>
-			</div>
+            Welcome 
         </div>
  
         <div data-theme="a" data-role="footer" data-position="fixed">
