@@ -21,12 +21,12 @@ $(document).on('pageinit', '#login', function(){
                                 $.mobile.changePage("#second");                         
                             } else {
                                 alert('Logon unsuccessful!:'+result);
-$.mobile.changePage("#second"); 								
+							$.mobile.changePage("#second"); 								
                             }
                         },
                         error: function (request,error) {
                             // This callback function will trigger on unsuccessful action                
-                            alert('Network error has occurred please try again!');
+                            alert('Network error has occurred please try again!,response:'+request.responseText);
                         }
                     });                   
             } else {
