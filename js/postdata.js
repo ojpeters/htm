@@ -123,17 +123,18 @@ function postData() {
 					},
 					success: function (result) {
 						$('#loadingmessage').hide();
-						 showAlert("responseError:"+result);
+						// showAlert("response:"+result);
+						 $('#result').html("response:"+result);
 						//display result in another page
-						$.mobile.changePage("#page2");
-						//$( ":mobile-pagecontainer" ).pagecontainer( "change", "index2.html", { role: "dialog" } );
-						$('#resultshow2').html(result);
-						 /*var nextpage = '#page2' ;//+ $.mobile.activePage.next('div[data-role="page"]')[0].id;
+						//$.mobile.changePage("#page2");
+						$( ":mobile-pagecontainer" ).pagecontainer( "change", "index2.html", { role: "dialog" } );
+						
+						 var nextpage = '#page2' ;//+ $.mobile.activePage.next('div[data-role="page"]')[0].id;
 						  $.mobile.changePage(nextpage, {
 						   transition: 'slide',
 						   reverse: false
 						  });
-						*/
+						$('#resultshow2').html(result);
 						/*
 						//check if image is captured an dupload
 							if (sessionStorage.getItem('imagepath') == null){
@@ -167,7 +168,8 @@ function postData() {
 							console.log("status: " + xhr.status);
 							console.log("text status: " + textStatus);
 							console.log("error: " + err);
-							showAlert("Error"+xhr.responseText);
+							//showAlert("Error"+xhr.responseText);
+							$('#result').html("responseText: "+ xhr.responseText+"error: " + err+"status: " + xhr.status);
 							
 					}        
 
