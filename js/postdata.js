@@ -36,7 +36,7 @@ function onPhotoDataSuccess(imageURI) {
 
         // Show the captured photo
         // The inline CSS rules are used to resize the image
-        
+        showAlert("Picture captured,Image url:"+imageURI);
         imgProfile.src = imageURI;
 		sessionStorage.setItem('imagepath', imageURI);//store value in session 
 
