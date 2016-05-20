@@ -20,8 +20,9 @@ $(document).on('pageinit', '#login', function(){
                             if(result.status) {
                                 $.mobile.changePage("#second");                         
                             } else {
-                                alert('Logon unsuccessful!:'+result);
-							$.mobile.changePage("#second"); 								
+                                alert('Logon unsuccessful!:'+result.status);
+							//$.mobile.changePage("#second"); 
+							window.location.href = 'addexpense.html';							
                             }
                         },
                         error: function (request,error) {

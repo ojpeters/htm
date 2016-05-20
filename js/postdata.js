@@ -126,16 +126,9 @@ function postData() {
 						// showAlert("response:"+result);
 						 $('#result').html("response:"+result);
 						//display result in another page
-						//$.mobile.changePage("#page2");
-						$( ":mobile-pagecontainer" ).pagecontainer( "change", "index2.html", { role: "dialog" } );
 						
-						 var nextpage = '#page2' ;//+ $.mobile.activePage.next('div[data-role="page"]')[0].id;
-						  $.mobile.changePage(nextpage, {
-						   transition: 'slide',
-						   reverse: false
-						  });
-						$('#resultshow2').html(result);
-						/*
+						
+						
 						//check if image is captured an dupload
 							if (sessionStorage.getItem('imagepath') == null){
 								// myValue was not set
@@ -148,12 +141,10 @@ function postData() {
 								/*var returnedresult=result.split(":");// we separated it
 								newsid=returnedresult[1];
 								uploadPhoto(imageitem,newsid);
-								/
-								//movePic(imageitem);
+								*/
+								//movePic(imageitem);								
 								
-								
-							}
-						*/	
+							}						
 						
 					},
 					error:  function(xhr,textStatus,err) {
