@@ -1,0 +1,216 @@
+<!--Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Kwenu</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<!-- Custom Theme files -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="keywords" content="Travel Reservation Widget Responsive, Login form web template, Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<!--google fonts-->
+<link href='//fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
+<!--google fonts-->
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/j-forms.css">
+
+<script src="js/jquery.1.11.1.min.js"></script>
+	<script src="js/jquery.ui.min.js"></script>
+	<script src="js/jquery.ui.timepicker.min.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/jquery.form.min.js"></script>
+	<script src="js/j-forms.min.js"></script>
+</head>
+<body>
+<!--header strat here-->
+<div class="element">
+	 <h1>Kwenu</h1>
+	 
+	<div class="wrapper">
+
+		<form action="j-folder" method="post" class="j-forms j-multistep" id="j-forms" novalidate>
+
+			
+			<!-- end /.header-->
+
+			<div class="content">
+
+				<fieldset>
+					<h2>Personal Info</h2>
+					<!-- start name -->
+					<div class="unit">
+						<div class="input">
+							<label class="icon-right" for="name">
+								<i class="fa fa-user"></i>
+							</label>
+							<input type="text" id="name" name="name" placeholder="your name">
+						</div>
+					</div>
+					<!-- end name -->
+
+					<!-- start email phone -->
+					<div class="j-row">
+						<div class="span6 unit">
+							<div class="input">
+								<label class="icon-right" for="email">
+									<i class="fa fa-envelope-o"></i>
+								</label>
+								<input type="email" id="email" name="email" placeholder="your email">
+							</div>
+						</div>
+						<div class="span6 unit">
+							<div class="input">
+								<label class="icon-right" for="phone">
+									<i class="fa fa-phone"></i>
+								</label>
+								<input type="text" id="phone" name="phone" placeholder="phone/mobile">
+							</div>
+						</div>
+					</div>
+					<!-- end email phone -->
+
+					<div class="divider-text gap-top-20 gap-bottom-45">
+						
+					</div>
+
+					<!-- start date and time -->
+					<div class="j-row">
+						<div class="span6 unit">
+							<div class="input">
+								<label class="icon-right" for="pickup_date">
+									<i class="fa fa-calendar"></i>
+								</label>
+								<input type="text" id="pickup_date" name="pickup_date" placeholder="pickup date">
+							</div>
+						</div>
+						<div class="span6 unit">
+							<div class="input">
+								<label class="icon-right" for="return_date">
+									<i class="fa fa-calendar"></i>
+								</label>
+								<input type="text" id="return_date" name="return_date" placeholder="return date">
+							</div>
+						</div>
+					</div>
+					<!-- end date and time -->
+
+					<!-- start airport_pick_up -->
+					<div class="unit logic-block-checkbox">
+						<label class="label">Is this an Upcoming Event?</label>
+						<label class="checkbox-toggle">
+							<input type="checkbox" name="next_step_checkbox" id="next-step-checkbox" value="Yes">
+							<i></i>
+						</label>
+						<span class="hint">
+							<strong>Note:</strong>
+							select "<strong>Yes</strong>" to add event info
+						</span>
+					</div>
+					<!-- end airport_pick_up -->
+
+				</fieldset>
+
+				<fieldset>
+
+					
+						<h3>Airport Information</h3>
+					
+
+					<!-- start airport -->
+					<div class="unit">
+						<div class="input">
+							<label class="icon-right" for="airport">
+								<i class="fa fa-plane"></i>
+							</label>
+							<input type="text" id="airport" name="airport" placeholder="which airport?">
+						</div>
+					</div>
+					<!-- end airport -->
+
+					<!-- start airline luggage -->
+					<div class="j-row">
+						<div class="span6 unit">
+							<div class="input">
+								<label class="icon-right" for="airline_flight_number">
+									<i class="fa fa-list-ol"></i>
+								</label>
+								<input type="text" id="airline_flight_number" name="airline_flight_number" placeholder="airline and flight number">
+							</div>
+						</div>
+						<div class="span6 unit">
+							<div class="input">
+								<label class="icon-right" for="number_of_luggage">
+									<i class="fa fa-suitcase"></i>
+								</label>
+								<input type="text" id="number_of_luggage" name="number_of_luggage" placeholder="number of luggage">
+							</div>
+						</div>
+					</div>
+					<!-- end airline luggage -->
+
+					<!-- start pickup_address -->
+					<div class="unit">
+						<div class="input">
+							<label class="icon-right" for="pickup_address">
+								<i class="fa fa-building-o"></i>
+							</label>
+							<input type="text" id="pickup_address" name="pickup_address" placeholder="pickup address">
+						</div>
+					</div>
+					<!-- end pickup_address -->
+
+					<!-- start drop_off -->
+					<div class="unit">
+						<div class="input">
+							<label class="icon-right" for="drop_off">
+								<i class="fa fa-building-o"></i>
+							</label>
+							<input type="text" id="drop_off" name="drop_off" placeholder="drop off">
+						</div>
+					</div>
+					<!-- end drop_off -->
+
+					<!-- start message -->
+					<div class="unit">
+						<div class="input">
+							<textarea spellcheck="false" name="message" placeholder="comments/message"></textarea>
+						</div>
+					</div>
+					<!-- end message -->
+
+				</fieldset>
+
+				<!-- start response from server -->
+				<div id="response"></div>
+				<!-- end response from server -->
+
+			</div>
+			<!-- end /.content -->
+
+			<div class="footer">
+				<button type="submit" class="primary-btn multi-submit-btn">Submit</button>
+				<button type="button" class="primary-btn multi-next-btn">Next</button>
+				<button type="button" class="secondary-btn multi-prev-btn">Back</button>
+			</div>
+			<!-- end /.footer -->
+
+		</form>
+	</div>
+
+
+	
+</div>
+<!--header end here-->
+<div class="copy-right">
+			<p>© 2016 Travel Reservation Widget. All rights reserved | Design by  <a href="http://w3layouts.com/" target="_blank">  W3layouts </a></p>
+</div>
+
+</body>
+</html>
